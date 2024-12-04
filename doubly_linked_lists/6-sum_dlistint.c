@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
  * sum_dlistint -  returns the sum of all the data (n)
@@ -9,6 +10,7 @@
 int sum_dlistint(dlistint_t *head)
 {
 	int sum;
+
 	sum = 0;
 
 	if (head != NULL)
