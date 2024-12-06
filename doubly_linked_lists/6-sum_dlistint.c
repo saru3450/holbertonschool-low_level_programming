@@ -2,28 +2,19 @@
 #include <stdlib.h>
 
 /**
- * sum_dlistint -  returns the sum of all the data (n)
- * @head: list of the head
- * Return: sum of all the data
+ * sum_dlistint - add all value each node
+ * @head : the content of element
+ * Return: sum of all vallue
  */
 
 int sum_dlistint(dlistint_t *head)
 {
-	int sum;
+	int sum = 0;
 
-	sum = 0;
-
-	if (head != NULL)
+	while (head)
 	{
-		while (head->prev != NULL)
-			head = head->prev;
-
-		while (head != NULL)
-		{
-			sum += head->n;
-			head = head->prev;
-		}
+		sum += head->n;
+		head = head->next;
 	}
-
 	return (sum);
 }
